@@ -1,0 +1,19 @@
+#btn-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#naverPayBtn {
+  background-color: #03c75a;
+  border-style: none;
+  height: 33px;
+  font-weight: 600;
+}
+
+#kakaoPayBtn {
+  background-color: #ffeb00;
+  border-style: none;
+  height: 33px;
+  font-weight: 600;
+  border-radius: 13px;
+}

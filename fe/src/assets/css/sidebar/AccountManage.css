@@ -1,0 +1,45 @@
+.accountmanage-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 13%;
+}
+
+.user-search-container {
+  background-color: white;
+  border-radius: 7px;
+  width: 80%;
+  color: black;
+  padding: 10px 20px 10px 20px;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+}
+
+.users-container {
+  width: 80%;
+  margin-top: 30px;
+  background-color: white;
+  border-radius: 7px;
+  padding: 10px 20px 10px 20px;
+}
+
+.user-table {
+  width: 100%;
+  color: black;
+  border-collapse: collapse;
+  font-size: 0.915rem;
+  text-align: center;
+  /* line-height: 3rem; */
+}
+
+.thead {
+  border-bottom: 1px solid black;
+  font-weight: 550;
+}
+
+td {
+  padding: 5px;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+  <input type="button" id="naverPayBtn" value="네이버페이 결제 버튼">
+  <script src="https://nsp.pay.naver.com/sdk/js/naverpay.min.js"></script>
+  <script>
+    const clientId = 'HN3GGCMDdTgGUfl0kFCo';
+    const chainId = 'NlQ4a05UVlpGQ2d';
+    const merchantId = 'np_rnhhi644797';
+
+    var oPay = Naver.Pay.create({ //SDK Parameters를 참고 바랍니다.
+      "mode": "development",
+      "clientId": clientId,
+      "chainId": chainId,
+      "openType": "page"
+    });
+    console.log(oPay.getVersion());
+    //직접 만드신 네이버페이 결제버튼에 click Event를 할당하세요
+    var elNaverPayBtn = document.getElementById("naverPayBtn");
+
+    elNaverPayBtn.addEventListener("click", function () {
+      console.log('클릭됨');
+      oPay.open({ // Pay Reserve Parameters를 참고 바랍니다.
+        "merchantPayKey": '123123',
+        "merchantUserKey": merchantId,
+        "productName": "테스트물건",
+        "productCount": 1,
+        "totalPayAmount": 1000,
+        "taxScopeAmount": 1000,
+        "taxExScopeAmount": 0,
+        "returnUrl": "http://localhost:3001/#/geul",
+        "productItems": [{
+          "categoryType": "ETC",
+          "categoryId": "ETC",
+          "uid": "1234",
+          "name": "test",
+          "payReferrer": "ETC",
+          "count": 1
+        }, {
+          "categoryType": "ETC",
+          "categoryId": "ETC",
+          "uid": "4567",
+          "name": "test2",
+          "payReferrer": "ETC",
+          "count": 2
+        }]
+      });
+    });
+
+  </script>
+
+</body>
+
+</html>
